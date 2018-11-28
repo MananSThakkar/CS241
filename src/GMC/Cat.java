@@ -1,0 +1,46 @@
+package GMC;
+
+public class Cat implements Comparable<Cat> {
+
+    private int age;
+    private String name;
+    private String color;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
+    public String toString(){
+        return name + age + color;
+    }
+    
+    public int compareTo(Cat c){
+        if(this.age == c.age)
+            return 0;
+        else if(this.age < c.age)
+            return -1;
+        else
+            return 1;
+    }
+
+}
